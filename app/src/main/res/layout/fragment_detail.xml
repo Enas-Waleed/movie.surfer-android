@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_scrollview"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.denzale.popularmovies.DetailActivityFragment">
+
+  <LinearLayout
+    android:id="@+id/detail_linear_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="24dp"
+        android:background="@color/red"
+        >
+        <TextView
+            android:id="@+id/movie_title"
+            android:text="Title"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_details_container"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            >
+
+            <ImageView
+            android:id="@+id/movie_thumbnail"
+            android:layout_width="112dp"
+            android:layout_height="208dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/main_details"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            >
+
+            <TextView
+                android:id="@+id/movie_release"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                />
+            <TextView
+                android:id="@+id/movie_vote"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                />
+
+            <com.github.ivbaranov.mfb.MaterialFavoriteButton
+                android:id="@+id/star_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:mfb_animate_favorite="true"
+                app:mfb_type="star"
+                app:mfb_color="black"
+                />
+
+            <Button
+                android:id="@+id/review_button"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:text="@string/review_button_text"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:background="@color/red"
+                android:layout_marginTop="8dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dp"
+          android:background="@color/black"
+          android:layout_marginBottom="16dp"
+          />
+
+     <TextView
+        android:id="@+id/movie_synopsis"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        />
+
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dp"
+          android:background="@color/black" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/trailers_text"
+          android:textColor="@color/black"
+          android:layout_marginTop="8dp"
+          android:layout_marginBottom="8dp"
+          />
+
+  </LinearLayout>
+
+</ScrollView>
